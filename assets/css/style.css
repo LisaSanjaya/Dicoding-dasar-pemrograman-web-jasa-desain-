@@ -1,0 +1,662 @@
+@keyframes slideDown {
+    from {
+        opacity:0.2;
+        margin-top: -40px;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    font-family: 'Poppins',sans-serif;
+}
+
+header{
+    margin: 0 auto;
+    display: inline;
+}
+
+header > nav {
+    position: sticky;
+    top: 0;
+    padding: 10px 70px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    z-index: 1;
+    background-color: white;
+}
+
+.header-logo {
+    flex-grow: 1;
+}
+
+nav > .navigation-header{
+    flex-grow: 3;
+    display: inline-block;
+    text-align: right;
+    background-color: white;
+}
+
+.navigation-header .nav-item{
+    list-style: none;
+    display: inline;
+    margin-right: 30px;
+}
+
+.navigation-header .nav-item:last-child{
+    margin-right: 0px;
+}
+
+.navigation-header .nav-item a{
+    background-color: white;
+    color: #606060;
+    font-size: 16px;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+.navigation-header .nav-item:last-child a{
+    padding: 6px 15px;
+    border-radius: 5px;
+    border: 2px solid #7001A8;
+    background-color:#7001A8;
+    color: white;
+}
+
+.active > a, .navigation-header .nav-item a:hover{
+    color: #7001A8;
+    border-bottom: 2px solid #7001A8;
+}
+
+.navigation-header .nav-item:last-child a:hover{
+    background-color: white;
+    border: 2px solid #7001A8;
+    color: #7001A8;
+}
+
+.navigation-header-responsive{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    font-size: 35px;
+    color: #212529;
+}
+
+#jumbotron{
+    display: flex;
+    padding: 0px 70px;
+    align-items: center;
+    height: 90vh;
+}
+
+#jumbotron-text,#jumbotron-illustration{
+    flex-grow: 1;
+}
+
+#jumbotron-illustration{
+    padding-left: 50px;    
+}
+
+#jumbotron-text > h1{
+    font-size: 55px;
+}
+
+#jumbotron-text > p{
+    padding-right: 50px;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #606060;
+    line-height: 1.9;
+    margin: 40px 0 30px;
+}
+
+.text-primary{
+    color: #7001A8;
+}
+
+.btn{
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.btn-primary{
+    background-color: #7001A8;
+    color: white;
+}
+
+.btn-outline-primary{
+    background-color: white;
+    border: 3px solid #7001A8;
+    color: #7001A8;
+}
+
+.btn-outline-primary:hover{
+    background-color: #7001A8;
+    color: white;
+}
+
+#tentang-kami{
+    height: 80vh;
+    background-color: #F1F1F1;
+    display: flex;
+    align-items: center;
+}
+
+.tentang-kami-image{
+    flex-basis: 40%;
+    background-image: url('../image/tentang_kami_image.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.tentang-kami-description{
+    flex-basis: 60%;
+    padding: 45px;
+}
+
+.tentang-kami-description > h2,#service > h2, h2{
+    font-size: 45px;
+}
+
+.tentang-kami-description > p{
+    margin: 30px 0px 10px;
+    line-height: 2;
+    text-align: justify;
+    color: #606060;
+}
+
+.stats{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.stats-divider{
+    height:40px;
+    width:2px;
+    margin: 0px 35px;
+    border-radius: 5px;
+    background-color: #606060;
+}
+
+.stats-header{
+    font-size:35px; 
+    font-weight: bold;
+}
+
+.stats-description{
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+#service{
+    padding:25px 70px 80px;
+    text-align: center;
+}
+
+#service > h2{
+    margin-top: 20px;
+}
+
+.underline{
+    width: 80px;
+    height: 5px;
+    background-color: #7001A8;
+    margin: 20px auto 50px;
+}
+
+#service > p{
+    font-size: 22px;
+    color: #606060;
+    margin-bottom: 50px;
+}
+
+.service-container{
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    margin-bottom: 40px;
+}
+
+.service-item{
+    box-shadow: 0 4px 4px 4px rgba(0,0,0,0.2);
+    margin: 15px;
+    flex-basis: 25%;
+    border-radius: 5px;
+    transition: margin-top 1s;
+}
+
+.service-item > a{
+    text-decoration: none;
+    color: black;
+}
+
+.service-item:hover{
+    margin-top: -40px;
+}
+
+.service-item > a > img{
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.service-description{
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.service-location{
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 25px;
+} 
+
+.service-location > p{
+    margin-left: 10px;
+    color: #606060;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+progress{
+    width:100%;
+}
+
+.service-status{
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-status-percent,.service-cash{
+    font-weight: bold;
+    display: inline;
+    
+}
+
+.service-cash{
+    text-align: right;
+}
+
+.service-time{
+    margin: 20px 0px 10px;
+    display: flex;
+    align-items: center ;
+}
+
+.service-time p{
+    margin-left: 10px;
+    display: inline;
+    color: #606060;
+}
+
+#kontak{
+    display: flex;
+    padding: 25px 70px ;
+}
+
+.kontak-form,.kontak-bio{
+    flex: 3;
+    padding: 10px 20px 0px;
+}
+
+.kontak-bio{
+    flex: 1;
+}
+
+.kontak-form > .card > h3{
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 5px 5px 0px 0px;
+    font-size: 35px;
+}
+
+.kontak-form > .card > h3::after{
+    content: ' ';
+    display: block;
+    width: 60px;
+    height: 5px;
+    margin: auto;
+    margin-top: 15px;
+    background-color: #7001A8;
+}
+
+label{
+    display: block;
+    margin-bottom:10px;
+}
+
+input.btn-primary{
+    border-style: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 45px;
+    border: 2px solid #7001A8;
+}
+
+input.btn-primary:hover{
+    background-color: white;
+    color: #7001A8;
+    border: 2px solid #7001A8;
+}
+
+.form-group > p{
+    color: #8f8f8f; 
+    font-size: 14px;
+}
+
+.profile-kontak{
+    object-fit: cover;
+    height: 140px;
+    width: 140px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.kontak-bio{
+    text-align: center;
+}
+
+.kontak-bio > .card{
+    padding:10px 25px;
+    position: relative;
+}
+
+.kontak-bio > .card::after{
+    content: ' ';
+    display: block;
+    height: 130px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px 5px 0 0;
+    background-color: #7001A8;
+}
+
+.text-muted{
+    color: #8f8f8f;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+}
+
+.table-responsive{
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.kontak-bio > table{
+    border-spacing: 0px;
+    width: auto;
+    border: 2px solid #f7f7f7;
+    margin-bottom: 55px;
+}
+
+tr,th,td{
+    text-align: left;
+    padding: 10px;
+}
+
+tr:nth-child(even){
+    background-color: #ffffff;
+}
+
+tr:nth-child(odd){
+    background-color: #f7f7f7;
+}
+
+#footer{
+    padding: 30px 70px 0px;
+    background-color: #F1F1F1;
+}
+
+.footer-content{
+    display: flex;
+}
+
+.footer-logo,.footer-kontak,.footer-menu{
+    flex: 1;
+}
+
+.footer-copyright{
+    padding: 20px 0px 40px;;
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: lighter;
+    text-align: center;
+    color: #8f8f8f;
+}
+
+.social-media{
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+}
+
+.social-media-group{
+    margin-top: 20px;
+}
+
+.social-media-group a{
+    display: inline-block;
+    margin-right: 25px;
+    text-decoration: none;
+    height: 40px;
+    width: 40px;
+}
+
+.instagram{
+    background-image: url('../image/instagram.svg');
+}
+
+.facebook{
+    background-image: url('../image/facebook.svg');
+}
+
+.twitter{
+    background-image: url('../image/twitter.svg');
+}
+
+@media (max-width:1100px){
+    .navigation-header{
+        padding: 10px 70px;
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        flex-grow: 0;
+        width: 100%;
+        box-shadow: 0 4px 4px 2px rgba(0,0,0,0.2);
+        border-top: 1px solid #bebebe;
+        opacity: 0;
+    }
+
+    .slide-down{
+        opacity: 1 !important;
+        animation: slideDown 0.5s;
+    }
+
+    .navigation-header .nav-item{
+        list-style: none;
+        display: block;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .navigation-header .nav-item:last-child a{
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .active > a,.navigation-header .nav-item a:hover{
+        color: #7001A8;
+        border-bottom: none;
+    }
+
+    .navigation-header-responsive{
+        display: inline-block;
+    }
+
+    #jumbotron{
+        padding-bottom: 10px;
+    }
+
+    #jumbotron-text > h1{
+        font-size: 35px;
+    }
+
+    #jumbotron-illustration > img{
+        width: 300px;
+    }
+
+    #tentang-kami{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tentang-kami-image{
+        width: 100%;
+        height: 500px;
+    }
+
+    #service{
+        padding-bottom:70px !important;
+        text-align: center;
+    }
+
+    .service-container{
+        flex-direction: column;
+    }
+
+    .service-item{
+        transition: none;
+    }
+
+    .service-item:hover{
+        margin-top: 15px !important;
+    }
+
+    #kontak{
+        flex-direction: column;
+        padding: 25px 10px;
+    }
+
+    .footer-content{
+        text-align: left;
+        flex-direction: column;
+    }
+
+    .footer-menu{
+        margin: 40px 0px;
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width:900px){
+    .navigation-header{
+        padding: 5px;
+    }
+
+    header > nav {
+        padding: 5px;   
+    }
+
+    #jumbotron{
+        flex-direction: column-reverse;
+        margin-top: 60px;
+        padding: 0px 25px 25px;
+        text-align: center;
+    }
+
+    #jumbotron-text > h1{
+        font-size: 35px;
+    }
+
+    #jumbotron-text > p{
+        text-align: justify;
+        font-size: 16px;
+        margin-top:25px;
+        padding-right: 0px;
+    }
+
+    #jumbotron-illustration > img{
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .service-item{
+        flex-basis: 60%;
+    }
+
+    .kontak-bio{
+        margin-bottom: 40px;
+    }
+
+    .table-responsive{
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width:500px){
+    .navigation-header{
+        padding: 10px 20px;
+    }
+
+    #jumbotron{
+        margin-top: 10px;
+    }
+
+    #tentang-kami{
+        height: auto;
+    }
+
+    #service{
+        padding:15px 10px;
+    }
+
+    .service-item{
+        flex-basis: 60%;
+    }
+
+    .table-responsive{
+        width: 90%;
+    }
+
+    .social-media,.social-media-group a{
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media screen and (max-width:375px){
+    #jumbotron{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width:350px){
+    #jumbotron{
+        margin-top: 220px;
+    }
+}
